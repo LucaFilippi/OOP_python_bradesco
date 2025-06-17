@@ -1,13 +1,16 @@
 class Costumer:
-        def __init__(self, n, phone):
-                self.__name = n
-                self._number = phone
+    def __init__(self, name, phone):
+        self.__name = name
+        self.__phone = phone 
         
-        #get method
-        def get_name(self):
-                return self.__name
+    def get_name(self):
+        return self.__name
         
-        #set method
-        def set_name(self, name):
-                self.name = name
+    def set_name(self, name):
+        self.__name = name
 
+    def get_phone(self): 
+        return self.__phone
+        
+    def __str__(self):
+        return f"Costumer: {self.__name}, Phone: {self.__phone}"

@@ -1,13 +1,15 @@
-class Main:
-    pass
-print ("testing project")
+print("testing project")
 
 from Costumer import Costumer
 from Account import Account
 
-c1 = Costumer("Peter", "555-0878")
-account = Account("665", c1.__name, 0)
+
+c1 = Costumer("", "555-0878")  
+c1.set_name("Peter")           
+
+account = Account("665", c1.get_name(), 0)  
+account.set_balance(10)  
 
 print(c1)
-print(f"name is {c1.__name} and phone number is {c1._number}")
-print(f"{account.owner}, number: {account.number}, current balance: {account.__balance}")
+print(f"name is {c1.get_name()} and phone number is {c1.get_phone()}")
+print(f"{account.owner}, number: {account.number}, current balance: {account.get_balance()}")
